@@ -8,7 +8,7 @@ import {
   Description,
   SignupButton,
 } from "../Styles/Home.jsx";
-import BaseModal from "../Modals/BaseModal.jsx";
+import BaseModal from "../Modals/BaseModal.tsx";
 
 const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -34,7 +34,13 @@ const Home = () => {
       </TextBoard>
       <div>
         <SignupButton onClick={OpenModal}>로그인</SignupButton>
-        {modalOpen && <BaseModal />}
+        {modalOpen && (
+          <BaseModal
+            isOpen={setModalOpen}
+            title="닉네임을 입력하세요"
+            alert="ⓘ 닉네임은 최소 네 글자 이상이어야 합니다."
+          />
+        )}
       </div>
       <Link to="/mySpace">
         <SignupButton>Move to MySpace</SignupButton>

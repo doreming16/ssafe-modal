@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Pages/Header.tsx";
 import Home from "./Pages/Home.jsx";
 import MySpace from "./Pages/MySpace.tsx";
-import BaseModal from "./Modals/BaseModal.jsx";
+import BaseModal from "./Modals/BaseModal.tsx";
 
 function App() {
   return (
