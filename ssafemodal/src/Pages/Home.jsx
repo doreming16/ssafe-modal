@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -8,8 +8,15 @@ import {
   Description,
   SignupButton,
 } from "../Styles/Home.jsx";
+import BaseModal from "../Modals/BaseModal.jsx";
 
 const Home = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const OpenModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <Container>
       <TextBoard>
@@ -25,9 +32,10 @@ const Home = () => {
           모든 핵심 과정을 폼나는싸패에서 한번에 해결하실 수 있습니다.
         </Description>
       </TextBoard>
-      <Link to="/logIn">
-        <SignupButton>로그인</SignupButton>
-      </Link>
+      <div>
+        <SignupButton onClick={OpenModal}>로그인</SignupButton>
+        {modalOpen && <BaseModal />}
+      </div>
       <Link to="/mySpace">
         <SignupButton>Move to MySpace</SignupButton>
       </Link>
