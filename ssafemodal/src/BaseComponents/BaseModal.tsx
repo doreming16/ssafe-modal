@@ -1,6 +1,4 @@
 import React from "react";
-import { Container } from "../Styles/Home.jsx";
-// import styled from "styled-components";
 import {
   ModalContainer,
   ModalBackground,

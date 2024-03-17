@@ -11,9 +11,6 @@ export const HeaderArea = styled.div`
   align-content: center;
   align-items: center;
   justify-content: space-between;
-  border-style: solid;
-  border-width: 0px 0px 1.5px 0px;
-  border-bottom-color: #e0e0e0;
 `;
 
 export const HeaderLeft = styled.div`
@@ -21,7 +18,7 @@ export const HeaderLeft = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   width: flex;
   height: flex;
   margin: 10px 30px;
@@ -31,6 +28,5 @@ export const Logo = styled.div`
   text-align: center;
   background-color: white;
   border-radius: 10px;
-  text-decoration: none;
   &: Link;
 `;
