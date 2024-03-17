@@ -21,3 +21,20 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+
+# styles
+# BaseModals.jsx
+// 버튼 "등록"
+export const ModalSubmit = styled.button``;
+
+// 버튼 "취소"
+export const ModalCancel = styled.button``;
+
+// 버튼 "다음 페이지"
+export const ModalNextPage = styled.div``;
+
+// 버튼 "이전 페이지"
+export const ModalPrevPage = styled.div``;

@@ -22,8 +22,7 @@ const Home = () => {
         <Description>
           폼의 제작, 응답자 모집, 보상, 분석에 불필요한 시간을 쏟지 마세요.
           <br />
-          모든 핵심 과정을 폼나는싸패에서 한번에 해결하실 수 있습니다. branch
-          test
+          모든 핵심 과정을 폼나는싸패에서 한번에 해결하실 수 있습니다.
         </Description>
       </TextBoard>
       <Link to="/logIn">
@@ -31,6 +30,9 @@ const Home = () => {
       </Link>
       <Link to="/mySpace">
         <SignupButton>Move to MySpace</SignupButton>
+      </Link>
+      <Link to="/baseModal">
+        <SignupButton>show baseModal</SignupButton>
       </Link>
     </Container>
   );

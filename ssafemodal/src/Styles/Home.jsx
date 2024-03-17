@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   font-family: "Noto Sans KR";
   height: 100vh;
   display: flex;
