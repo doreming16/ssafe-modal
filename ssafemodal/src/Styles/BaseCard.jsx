@@ -47,9 +47,9 @@ export const CardTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 12px;
+  height: 14px;
   margin: 0px 10px 0px 0px;
-  padding: 10px 15px;
+  padding: 15px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: bold;

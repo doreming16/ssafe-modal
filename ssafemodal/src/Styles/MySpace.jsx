@@ -15,10 +15,12 @@ export const TabButton = styled.button`
   background-color: white;
   padding: 8px 24px;
   border: none;
+  cursor: default;
   ${(props) =>
     !props.disabled &&
     css`
       border-bottom: 3px solid black;
+      cursor: pointer;
     `}
 `;
 
@@ -49,7 +51,7 @@ export const MySpaceContainer = styled.div`
 export const SearchBox = styled.div`
   height: 24px;
   display: flex;
-  text-align; center;
+  text-align: center;
   margin-bottom: 32px;
 `;
 

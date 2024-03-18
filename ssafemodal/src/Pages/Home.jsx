@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import BaseHeader from "../BaseComponents/BaseHeader.tsx";
 import { Link } from "react-router-dom";
-import Header from "../BaseComponents/BaseHeader.tsx";
 import {
   Container,
   TextBoard,
@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <Header HeaderLogo="폼나는싸패" />
+      <BaseHeader HeaderLogo="폼나는싸패" />
       <Container>
         <TextBoard>
           <SubTitle>데이터 수집을 위한 올인원 툴</SubTitle>
@@ -35,16 +35,16 @@ const Home = () => {
             모든 핵심 과정을 폼나는싸패에서 한번에 해결하실 수 있습니다.
           </Description>
         </TextBoard>
-        <div>
-          <SignupButton onClick={OpenModal}>로그인</SignupButton>
-          {modalOpen && (
-            <BaseModal
-              isOpen={setModalOpen}
-              title="닉네임을 입력하세요"
-              alert="ⓘ 닉네임은 최소 네 글자 이상이어야 합니다."
-            />
-          )}
-        </div>
+        {/* <div> */}
+        <SignupButton onClick={OpenModal}>로그인</SignupButton>
+        {modalOpen && (
+          <BaseModal
+            isOpen={setModalOpen}
+            title="닉네임을 입력하세요"
+            alert="ⓘ 닉네임은 최소 네 글자 이상이어야 합니다."
+          />
+        )}
+        {/* </div> */}
         <Link to="/mySpace">
           <SignupButton>Move to MySpace</SignupButton>
         </Link>

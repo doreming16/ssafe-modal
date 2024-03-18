@@ -7,7 +7,7 @@ export const HeaderArea = styled.div`
   left: 0;
   width: 100%;
   height: 70px;
-  padding: 0px 10px;
+  padding: 8px 32px;
   display: flex;
   align-content: center;
   align-items: center;
@@ -18,11 +18,22 @@ export const HeaderArea = styled.div`
 export const Logo = styled.a`
   width: flex;
   height: flex;
-  margin: 10px 30px;
+  margin: 10px;
   color: #525252;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   background-color: white;
   border-radius: 10px;
+`;
+
+export const Profile = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: #f0af32;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  overflow: hidden;
 `;
