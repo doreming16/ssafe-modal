@@ -8,7 +8,7 @@ import {
   Title,
   Description,
   SignupButton,
-} from "../Styles/Home.jsx";
+} from "../Styles/Home.tsx";
 import BaseModal from "../BaseComponents/BaseModal.tsx";
 
 const Home = () => {

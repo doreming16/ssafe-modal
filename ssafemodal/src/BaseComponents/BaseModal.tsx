@@ -11,22 +11,36 @@ import {
   ModalInputGroup,
   ModalInputTitle,
   ModalInput,
-  ModalButtonBox,
-} from "../Styles/BaseModal.jsx";
+  ModalTagBox,
+  ModalFooter,
+  ModalFooterCancel,
+  ModalFooterConfirm,
+} from "../Styles/BaseModal.tsx";
 
 type Props = {
-  title?: string;
-  subtitle?: string;
+  isOpen?: boolean;
+  title: string;
+  subtitle: string;
   alert?: string;
-  inputTitle?: string;
+  inputTitle1?: string;
+  inputTitle2?: string;
+  confirm?: string;
+  cancel?: string;
 };
 
-const BaseModal = ({ title, subtitle, alert, inputTitle }: Props) => {
+const BaseModal = ({
+  title,
+  subtitle,
+  alert,
+  inputTitle1,
+  inputTitle2,
+  confirm,
+  cancel,
+}: Props) => {
   return (
-    <>
-      <ModalBackground></ModalBackground>
-      <ModalContainer>
-        <ModalFrame>
+    <ModalFrame>
+      <ModalBackground>
+        <ModalContainer>
           <ModalTitleBox>
             <ModalTitle>{title}</ModalTitle>
             <ModalSubtitle>{subtitle}</ModalSubtitle>
@@ -34,14 +48,20 @@ const BaseModal = ({ title, subtitle, alert, inputTitle }: Props) => {
           </ModalTitleBox>
           <ModalInputBox>
             <ModalInputGroup>
-              <ModalInputTitle>{inputTitle}</ModalInputTitle>
+              <ModalInputTitle>{inputTitle1}</ModalInputTitle>
+              <ModalInput></ModalInput>
+              <ModalInputTitle>{inputTitle2}</ModalInputTitle>
               <ModalInput></ModalInput>
             </ModalInputGroup>
           </ModalInputBox>
-          <ModalButtonBox></ModalButtonBox>
-        </ModalFrame>
-      </ModalContainer>
-    </>
+          <ModalTagBox></ModalTagBox>
+          <ModalFooter>
+            <ModalFooterCancel>{cancel}</ModalFooterCancel>
+            <ModalFooterConfirm>{confirm}</ModalFooterConfirm>
+          </ModalFooter>
+        </ModalContainer>
+      </ModalBackground>
+    </ModalFrame>
   );
 };
 export default BaseModal;

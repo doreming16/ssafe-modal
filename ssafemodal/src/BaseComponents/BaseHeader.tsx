@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderArea, Logo, Profile } from "../Styles/BaseHeader.jsx";
+import { HeaderArea, Logo, Profile } from "../Styles/BaseHeader.tsx";
 
 type Props = {
   HeaderLogo?: string;

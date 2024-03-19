@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   CardHeader,
@@ -8,7 +9,7 @@ import {
   QuestionInfo,
   CardTagBox,
   CardTag,
-} from "../Styles/BaseCard.jsx";
+} from "../Styles/BaseCard.tsx";
 
 const BaseCard = () => {
   return (
