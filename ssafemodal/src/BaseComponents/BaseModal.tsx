@@ -16,16 +16,18 @@ import {
   ModalFooterCancel,
   ModalFooterConfirm,
 } from "../Styles/BaseModal.tsx";
+import { GrFormPreviousLink } from "react-icons/gr";
 
 type Props = {
   isOpen?: boolean;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   alert?: string;
   inputTitle1?: string;
   inputTitle2?: string;
   confirm?: string;
   cancel?: string;
+  closeModal?: () => void;
 };
 
 const BaseModal = ({
@@ -36,10 +38,12 @@ const BaseModal = ({
   inputTitle2,
   confirm,
   cancel,
+  closeModal,
 }: Props) => {
   return (
-    <ModalFrame>
-      <ModalBackground>
+    <>
+      <ModalFrame>
+        <ModalBackground onClick={closeModal}></ModalBackground>
         <ModalContainer>
           <ModalTitleBox>
             <ModalTitle>{title}</ModalTitle>
@@ -56,12 +60,15 @@ const BaseModal = ({
           </ModalInputBox>
           <ModalTagBox></ModalTagBox>
           <ModalFooter>
-            <ModalFooterCancel>{cancel}</ModalFooterCancel>
+            <ModalFooterCancel onClick={closeModal}>
+              <GrFormPreviousLink />
+              {cancel}
+            </ModalFooterCancel>
             <ModalFooterConfirm>{confirm}</ModalFooterConfirm>
           </ModalFooter>
         </ModalContainer>
-      </ModalBackground>
-    </ModalFrame>
+      </ModalFrame>
+    </>
   );
 };
 export default BaseModal;

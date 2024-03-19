@@ -18,6 +18,10 @@ const Home = () => {
     setModalOpen(true);
   };
 
+  const CloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <>
       <BaseHeader HeaderLogo="폼나는싸패" />
@@ -39,9 +43,9 @@ const Home = () => {
         <SignupButton onClick={OpenModal}>로그인</SignupButton>
         {modalOpen && (
           <BaseModal
-            isOpen={setModalOpen}
             title="닉네임을 입력하세요"
             alert="ⓘ 닉네임은 최소 네 글자 이상이어야 합니다."
+            closeModal={CloseModal}
           />
         )}
         {/* </div> */}

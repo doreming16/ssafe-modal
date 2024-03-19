@@ -2,27 +2,27 @@ import styled from "styled-components";
 
 export const ModalFrame = styled.div`
   position: absolute;
-  z-index: 100;
   width: 100vw;
   height: 100vh;
-`;
-export const ModalBackground = styled.div`
-  z-index: 200;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+export const ModalBackground = styled.div`
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+`;
 
 export const ModalContainer = styled.div`
-min-width: 400px;
+  min-width: 400px;
   z-index 300:
   position: absolute;
+  top: 50%;
+  left: 50%;
   align-items: center;
   background-color: white;
   padding: 10px 30px;

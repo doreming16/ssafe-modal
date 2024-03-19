@@ -17,10 +17,14 @@ import { IoCaretDownSharp } from "react-icons/io5";
 import BaseModal from "../BaseComponents/BaseModal.tsx";
 
 const MySpace = () => {
-  const [modalOpen, setModalopen] = useState(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const OpenModal = () => {
-    setModalopen(true);
+    setModalOpen(true);
+  };
+
+  const CloseModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -36,6 +40,7 @@ const MySpace = () => {
             inputTitle2="설문지 설명을 입력하세요."
             cancel="취소하기"
             confirm="확인"
+            closeModal={CloseModal}
           ></BaseModal>
         )}
         <TabContainer>
