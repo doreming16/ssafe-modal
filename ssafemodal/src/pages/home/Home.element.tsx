@@ -10,8 +10,11 @@ export const Container = styled.div`
 `;
 
 export const TextBoard = styled.div`
-  justify-content: center;
-  margin: 0px 0px 100px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  margin: 50px 0px;
 `;
 
 export const SubTitle = styled.div`

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const MenuContainer = styled.div`
-  margin: 70px 10px 0px 10px;
+  margin: 90px 10px 0px 10px;
   padding: 0px 20px;
 `;
 
@@ -13,12 +13,14 @@ export const TabButton = styled.button`
   height: 100%;
   font-size: 14px;
   background-color: white;
-  padding: 8px 24px;
+  padding: 12px 24px;
   border: none;
+  cursor: pointer;
   ${(props) =>
     !props.disabled &&
     css`
       border-bottom: 3px solid black;
+      cursor: pointer;
     `}
 `;
 
@@ -30,6 +32,7 @@ export const WriteButton = styled.button`
   font-weight: bold;
   border-radius: 4px;
   border-color: transparent;
+  background-color: black;
   color: white;
   cursor: pointer;
   display: flex;
@@ -49,7 +52,7 @@ export const SearchBox = styled.div`
   height: 24px;
   display: flex;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 `;
 
 export const Button = styled.div`
@@ -57,13 +60,12 @@ export const Button = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 20px;
   margin-right: 10px;
   border-radius: 30px;
   border: 1px solid #e5e5e5;
   background-color: white;
   color: #a3a3a3;
-  font-weight: bold;
   font-size: 14px;
   cursor: pointer;
 `;
@@ -72,8 +74,13 @@ export const SearchButton = styled(Button)`
   min-width: 170px;
 `;
 
+export const SearchText = styled.div``;
+export const SearchIcon = styled.div`
+  padding-top: 3px;
+`;
+
 export const OrderButton = styled(Button)`
-  min-width: 130px;
+  min-width: 150px;
 `;
 
 export const CardBox = styled.div`

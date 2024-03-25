@@ -8,7 +8,6 @@ export const HeaderArea = styled.div`
   height: 70px;
   padding: 8px 32px;
   display: flex;
-  align-content: center;
   align-items: center;
   justify-content: space-between;
   border-style: solid;
@@ -16,23 +15,14 @@ export const HeaderArea = styled.div`
   border-bottom-color: #e0e0e0;
 `;
 
-export const HeaderLeft = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const Logo = styled.div`
-  width: flex;
-  height: flex;
-  margin: 10px 30px;
+  margin: 10px;
   color: #263238;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
   background-color: white;
   border-radius: 10px;
   text-decoration: none;
-  /* &: Link; */
 `;
 
 export const Profile = styled.div`

@@ -7,6 +7,8 @@ import {
   TabButton,
   SearchBox,
   SearchButton,
+  SearchText,
+  SearchIcon,
   OrderButton,
   CardBox,
 } from "./MySpace.element";
@@ -49,12 +51,16 @@ const MySpace = () => {
       <MySpaceContainer>
         <SearchBox>
           <SearchButton>
-            프로젝트를 검색하세요
-            <BiSolidSearch />
+            <SearchText>프로젝트를 검색하세요</SearchText>
+            <SearchIcon>
+              <BiSolidSearch />
+            </SearchIcon>
           </SearchButton>
           <OrderButton>
-            최근에 수정된 순서
-            <IoCaretDownSharp />
+            <SearchText>최근에 수정된 순서</SearchText>
+            <SearchIcon>
+              <IoCaretDownSharp />
+            </SearchIcon>
           </OrderButton>
         </SearchBox>
         <CardBox>
